@@ -1,0 +1,907 @@
+<!DOCTYPE html>
+<html lang="id" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dimas | Frontend Developer Portfolio</title>
+  <meta name="description" content="Portofolio resmi Dimas - Frontend Developer yang berfokus pada pengembangan antarmuka web modern, responsif, dan ramah pengguna dengan HTML, CSS, JavaScript, Tailwind CSS, dan Bootstrap.">
+  <meta name="keywords" content="Frontend Developer, Web Developer, Dimas Portfolio, Tailwind CSS, Bootstrap, JavaScript, D3 Teknik Informatika">
+  <meta name="author" content="Dimas">
+
+  <!-- Open Graph Meta Tags -->
+  <meta property="og:title" content="Dimas | Frontend Developer Portfolio">
+  <meta property="og:description" content="Membangun antarmuka web yang rapi, responsif, dan interaktif. Lulusan D3 Teknik Informatika.">
+  <meta property="og:type" content="website">
+
+  <!-- Google Fonts: Plus Jakarta Sans & JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Background Glow & Grid Effect -->
+  <div class="bg-mesh" aria-hidden="true"></div>
+  <div class="bg-grid-pattern" aria-hidden="true"></div>
+
+  <!-- Header / Navigation Bar -->
+  <header class="site-header" id="header">
+    <div class="container nav-container">
+      <a href="#home" class="logo" id="logo-link">
+        <span class="logo-symbol">&lt;/&gt;</span>
+        <span class="logo-text">Dimas<span class="accent-dot">.</span></span>
+      </a>
+
+      <!-- Desktop Navigation Links -->
+      <nav class="nav-menu" id="nav-menu" aria-label="Navigasi Utama">
+        <ul class="nav-list">
+          <li><a href="#home" class="nav-link active" id="nav-link-home">Home</a></li>
+          <li><a href="#about" class="nav-link" id="nav-link-about">Tentang</a></li>
+          <li><a href="#skills" class="nav-link" id="nav-link-skills">Keahlian</a></li>
+          <li><a href="#projects" class="nav-link" id="nav-link-projects">Proyek</a></li>
+          <li><a href="#education" class="nav-link" id="nav-link-education">Pendidikan</a></li>
+          <li><a href="#contact" class="nav-link" id="nav-link-contact">Kontak</a></li>
+        </ul>
+      </nav>
+
+      <!-- Action Buttons & Theme Switcher -->
+      <div class="header-actions">
+        <button type="button" class="theme-toggle" id="theme-toggle-btn" aria-label="Ganti tema warna" title="Ganti Tema">
+          <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+          <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+        </button>
+
+        <a href="#contact" class="btn btn-sm btn-primary header-cta" id="header-cta-btn">Hubungi</a>
+
+        <!-- Mobile Menu Hamburger Button -->
+        <button type="button" class="mobile-toggle" id="mobile-toggle-btn" aria-label="Buka navigasi menu" aria-expanded="false" aria-controls="nav-menu">
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <!-- HERO SECTION -->
+    <section class="section hero-section" id="home">
+      <div class="container hero-container">
+        <div class="hero-content">
+          <!-- Availability Badge -->
+          <div class="status-badge" id="hero-status-badge">
+            <span class="status-indicator"></span>
+            <span>Tersedia untuk Peluang Kerja (Frontend Developer)</span>
+          </div>
+
+          <h1 class="hero-title">
+            Halo, saya <span class="highlight-text">Dimas</span><br>
+            <span class="hero-role">Frontend Developer</span>
+          </h1>
+
+          <p class="hero-tagline">
+            Mengubah rancangan sistem menjadi antarmuka web yang rapi, intuitif, dan nyaman digunakan di berbagai ukuran layar.
+          </p>
+
+          <p class="hero-desc">
+            Lulusan D3 Teknik Informatika dengan spesialisasi membangun antarmuka web modern menggunakan <strong>HTML5, CSS3, JavaScript, Tailwind CSS</strong>, dan <strong>Bootstrap</strong>, didukung pemahaman alur data backend.
+          </p>
+
+          <div class="hero-cta-group">
+            <a href="#projects" class="btn btn-primary" id="btn-explore-projects">
+              <span>Lihat Proyek Saya</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </a>
+            <a href="#contact" class="btn btn-outline" id="btn-contact-me">
+              <span>Hubungi Saya</span>
+            </a>
+          </div>
+
+          <!-- Quick Tech Stack Badges -->
+          <div class="hero-tech-stack">
+            <span class="tech-stack-label">Fokus Utama:</span>
+            <div class="tech-pills">
+              <span class="tech-pill">Tailwind CSS</span>
+              <span class="tech-pill">Bootstrap</span>
+              <span class="tech-pill">JavaScript</span>
+              <span class="tech-pill">Shadcn/ui</span>
+              <span class="tech-pill">Responsive Design</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Interactive Hero Code / Preview Card -->
+        <div class="hero-visual" aria-hidden="true">
+          <div class="code-card">
+            <div class="code-header">
+              <div class="window-controls">
+                <span class="control close"></span>
+                <span class="control minimize"></span>
+                <span class="control maximize"></span>
+              </div>
+              <div class="code-file-tab">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+                  <polyline points="2 17 12 22 22 17"></polyline>
+                  <polyline points="2 12 12 17 22 12"></polyline>
+                </svg>
+                <span>developer.config.js</span>
+              </div>
+            </div>
+            <div class="code-body">
+              <pre><code><span class="token-keyword">const</span> <span class="token-var">developer</span> = {
+  <span class="token-prop">name</span>: <span class="token-string">"Dimas"</span>,
+  <span class="token-prop">role</span>: <span class="token-string">"Frontend Developer"</span>,
+  <span class="token-prop">education</span>: <span class="token-string">"D3 Teknik Informatika"</span>,
+  <span class="token-prop">primarySkills</span>: [
+    <span class="token-string">"HTML5"</span>, <span class="token-string">"CSS3"</span>, <span class="token-string">"JavaScript"</span>,
+    <span class="token-string">"Tailwind CSS"</span>, <span class="token-string">"Bootstrap"</span>,
+    <span class="token-string">"Shadcn/ui"</span>
+  ],
+  <span class="token-prop">supportingSkills</span>: {
+    <span class="token-prop">backend</span>: [<span class="token-string">"PHP"</span>, <span class="token-string">"Python"</span>, <span class="token-string">"Java"</span>],
+    <span class="token-prop">database</span>: [<span class="token-string">"MySQL"</span>, <span class="token-string">"PostgreSQL"</span>],
+    <span class="token-prop">tools</span>: [<span class="token-string">"Git"</span>, <span class="token-string">"GitHub"</span>]
+  },
+  <span class="token-prop">focus</span>: <span class="token-string">"Responsive UI & Seamless UX"</span>,
+  <span class="token-prop">openForWork</span>: <span class="token-boolean">true</span>
+};</code></pre>
+            </div>
+            <div class="code-footer">
+              <span class="indicator-active"></span>
+              <span>Ready for frontend opportunities</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section class="section about-section" id="about">
+      <div class="container">
+        <div class="section-heading">
+          <span class="section-tag">Tentang Saya</span>
+          <h2 class="section-title">Dedikasi Pada Pengalaman & Antarmuka Pengguna</h2>
+          <p class="section-subtitle">Perjalanan, fokus minat, dan pendekatan saya dalam pengembangan antarmuka web.</p>
+        </div>
+
+        <div class="about-grid">
+          <div class="about-narrative">
+            <p class="about-paragraph">
+              Saya merupakan lulusan <strong>D3 Teknik Informatika</strong> yang berfokus pada pengembangan sisi depan aplikasi web (<em>Frontend Development</em>). Bagi saya, antarmuka yang baik bukan hanya tentang estetika visual semata, melainkan bagaimana pengguna dapat memahami alur informasi dan menyelesaikan tujuannya dengan mudah, cepat, dan tanpa hambatan.
+            </p>
+            <p class="about-paragraph">
+              Keseharian saya berpusat pada teknologi web inti seperti <strong>HTML, CSS, dan JavaScript</strong>, didukung ekosistem styling modern seperti <strong>Tailwind CSS, Shadcn/ui</strong>, dan <strong>Bootstrap</strong>. Selain itu, bekal pemahaman dasar bahasa backend (<em>PHP, Python, Java</em>) serta basis data (<em>MySQL, PostgreSQL</em>) memungkinkan saya memahami bagaimana struktur data dialirkan dari server ke antarmuka, sehingga proses komunikasi dan integrasi dengan pengembang backend dapat berjalan selaras.
+            </p>
+
+            <div class="about-highlights-grid">
+              <div class="highlight-item">
+                <div class="highlight-icon">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                    <line x1="8" y1="21" x2="16" y2="21"></line>
+                    <line x1="12" y1="17" x2="12" y2="21"></line>
+                  </svg>
+                </div>
+                <div>
+                  <h3 class="highlight-title">Responsive & Mobile First</h3>
+                  <p class="highlight-desc">Memastikan layout tetap proporsional dan nyaman diakses di smartphone, tablet, maupun layar desktop.</p>
+                </div>
+              </div>
+
+              <div class="highlight-item">
+                <div class="highlight-icon">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+                    <polyline points="2 17 12 22 22 17"></polyline>
+                    <polyline points="2 12 12 17 22 12"></polyline>
+                  </svg>
+                </div>
+                <div>
+                  <h3 class="highlight-title">Komponen Bersih & Terstruktur</h3>
+                  <p class="highlight-desc">Menerapkan tata letak modular menggunakan utility-first CSS untuk pemeliharaan kode yang efisien.</p>
+                </div>
+              </div>
+
+              <div class="highlight-item">
+                <div class="highlight-icon">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <ellipse cx="12" cy="5" rx="9" ry="3"></ellipse>
+                    <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path>
+                    <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path>
+                  </svg>
+                </div>
+                <div>
+                  <h3 class="highlight-title">Kolaborasi Data & Backend</h3>
+                  <p class="highlight-desc">Mengerti cara manipulasi model data dan parameter database untuk kelancaran rendering data dinamis.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Quick Overview Card -->
+          <div class="about-card">
+            <div class="profile-badge-card">
+              <div class="avatar-placeholder">
+                <span class="avatar-initials">D</span>
+              </div>
+              <h3 class="profile-name">Dimas</h3>
+              <span class="profile-role">Frontend Web Developer</span>
+              
+              <ul class="quick-info-list">
+                <li>
+                  <span class="info-label">Pendidikan</span>
+                  <span class="info-value">D3 Teknik Informatika</span>
+                </li>
+                <li>
+                  <span class="info-label">Spesialisasi</span>
+                  <span class="info-value">Frontend & UI Design</span>
+                </li>
+                <li>
+                  <span class="info-label">Status</span>
+                  <span class="info-value text-success">Open to Work / Siap Berkontribusi</span>
+                </li>
+                <li>
+                  <span class="info-label">Domisili</span>
+                  <span class="info-value">Indonesia</span>
+                </li>
+              </ul>
+
+              <div class="about-card-action">
+                <a href="#contact" class="btn btn-sm btn-primary w-full" id="btn-quick-contact">Hubungi Sekarang</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS SECTION -->
+    <section class="section skills-section" id="skills">
+      <div class="container">
+        <div class="section-heading">
+          <span class="section-tag">Keahlian & Teknologi</span>
+          <h2 class="section-title">Kumpulan Kemampuan Teknis</h2>
+          <p class="section-subtitle">Dikelompokkan berdasarkan keahlian utama antarmuka dan kemampuan pendukung.</p>
+        </div>
+
+        <div class="skills-grid">
+          <!-- Category 1: Frontend Core & Styling -->
+          <div class="skill-category-card">
+            <div class="category-header">
+              <div class="category-icon primary-accent">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polyline points="16 18 22 12 16 6"></polyline>
+                  <polyline points="8 6 2 12 8 18"></polyline>
+                </svg>
+              </div>
+              <div>
+                <h3 class="category-title">Frontend Core & Styling</h3>
+                <span class="category-badge">Fokus Utama</span>
+              </div>
+            </div>
+            <p class="category-desc">Teknologi dasar dan framework styling yang saya gunakan untuk mengonstruksi tampilan antarmuka.</p>
+            
+            <div class="skill-items-list">
+              <div class="skill-badge-item">
+                <span class="skill-bullet"></span>
+                <span class="skill-name">HTML5</span>
+                <span class="skill-level">Semantik & Aksesibilitas</span>
+              </div>
+              <div class="skill-badge-item">
+                <span class="skill-bullet"></span>
+                <span class="skill-name">CSS3</span>
+                <span class="skill-level">Flexbox, Grid, Animasi</span>
+              </div>
+              <div class="skill-badge-item">
+                <span class="skill-bullet"></span>
+                <span class="skill-name">JavaScript</span>
+                <span class="skill-level">DOM Manipulation, Event Handling</span>
+              </div>
+              <div class="skill-badge-item">
+                <span class="skill-bullet"></span>
+                <span class="skill-name">Tailwind CSS</span>
+                <span class="skill-level">Utility-First & Custom Theme</span>
+              </div>
+              <div class="skill-badge-item">
+                <span class="skill-bullet"></span>
+                <span class="skill-name">Bootstrap</span>
+                <span class="skill-level">Komponen Responsif</span>
+              </div>
+              <div class="skill-badge-item">
+                <span class="skill-bullet"></span>
+                <span class="skill-name">Shadcn/ui</span>
+                <span class="skill-level">Komponen UI Modern</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Category 2: Supporting Languages & Database -->
+          <div class="skill-category-card">
+            <div class="category-header">
+              <div class="category-icon secondary-accent">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <ellipse cx="12" cy="5" rx="9" ry="3"></ellipse>
+                  <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path>
+                  <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path>
+                </svg>
+              </div>
+              <div>
+                <h3 class="category-title">Supporting & Database</h3>
+                <span class="category-badge badge-neutral">Nilai Tambah</span>
+              </div>
+            </div>
+            <p class="category-desc">Bahasa pemrograman dan basis data yang saya pahami untuk memudahkan integrasi data antarmuka.</p>
+            
+            <div class="skill-items-list">
+              <div class="skill-badge-item">
+                <span class="skill-bullet"></span>
+                <span class="skill-name">PHP</span>
+                <span class="skill-level">Server Scripting & Templating</span>
+              </div>
+              <div class="skill-badge-item">
+                <span class="skill-bullet"></span>
+                <span class="skill-name">Python</span>
+                <span class="skill-level">Struktur Logika & Scripting</span>
+              </div>
+              <div class="skill-badge-item">
+                <span class="skill-bullet"></span>
+                <span class="skill-name">Java</span>
+                <span class="skill-level">Pemrograman Berorientasi Objek</span>
+              </div>
+              <div class="skill-badge-item">
+                <span class="skill-bullet"></span>
+                <span class="skill-name">MySQL</span>
+                <span class="skill-level">Relational Database & Query</span>
+              </div>
+              <div class="skill-badge-item">
+                <span class="skill-bullet"></span>
+                <span class="skill-name">PostgreSQL</span>
+                <span class="skill-level">Relational Data Management</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Category 3: Tools & Workflow -->
+          <div class="skill-category-card">
+            <div class="category-header">
+              <div class="category-icon success-accent">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <line x1="6" y1="3" x2="6" y2="15"></line>
+                  <circle cx="18" cy="6" r="3"></circle>
+                  <circle cx="6" cy="18" r="3"></circle>
+                  <path d="M18 9a9 9 0 0 1-9 9"></path>
+                </svg>
+              </div>
+              <div>
+                <h3 class="category-title">Workflow & Tools</h3>
+                <span class="category-badge badge-neutral">Standar Kerja</span>
+              </div>
+            </div>
+            <p class="category-desc">Alat kerja untuk kolaborasi tim, pelacakan versi kode, dan debugging antarmuka secara presisi.</p>
+            
+            <div class="skill-items-list">
+              <div class="skill-badge-item">
+                <span class="skill-bullet"></span>
+                <span class="skill-name">Git</span>
+                <span class="skill-level">Version Control & Branching</span>
+              </div>
+              <div class="skill-badge-item">
+                <span class="skill-bullet"></span>
+                <span class="skill-name">GitHub</span>
+                <span class="skill-level">Repository & Kolaborasi Proyek</span>
+              </div>
+              <div class="skill-badge-item">
+                <span class="skill-bullet"></span>
+                <span class="skill-name">Browser DevTools</span>
+                <span class="skill-level">Inspeksi Elemen & Debug CSS</span>
+              </div>
+              <div class="skill-badge-item">
+                <span class="skill-bullet"></span>
+                <span class="skill-name">Responsive Testing</span>
+                <span class="skill-level">Pengujian Multi-Device</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS SECTION -->
+    <section class="section projects-section" id="projects">
+      <div class="container">
+        <div class="section-heading">
+          <span class="section-tag">Portofolio Proyek</span>
+          <h2 class="section-title">Hasil Karya & Implementasi Nyata</h2>
+          <p class="section-subtitle">Beberapa aplikasi dan sistem antarmuka web yang pernah saya bangun untuk kebutuhan akademik dan sistem.</p>
+        </div>
+
+        <!-- Filter Controls -->
+        <div class="filter-controls" role="tablist" aria-label="Filter Kategori Proyek">
+          <button type="button" class="filter-btn active" data-filter="all" id="filter-btn-all" role="tab" aria-selected="true">Semua Proyek (3)</button>
+          <button type="button" class="filter-btn" data-filter="dashboard" id="filter-btn-dashboard" role="tab" aria-selected="false">Dashboard & Advokasi</button>
+          <button type="button" class="filter-btn" data-filter="ecommerce" id="filter-btn-ecommerce" role="tab" aria-selected="false">E-Commerce</button>
+          <button type="button" class="filter-btn" data-filter="academic" id="filter-btn-academic" role="tab" aria-selected="false">Sistem Akademik</button>
+        </div>
+
+        <!-- Projects Grid -->
+        <div class="projects-grid">
+          
+          <!-- PROJECT 1: ADVOKASI SEKOLAH (FEATURED) -->
+          <article class="project-card featured-project" data-category="dashboard" id="project-card-advokasi">
+            <div class="card-media">
+              <!-- Visual UI Mockup for School Advocacy Dashboard -->
+              <div class="ui-mockup-wrapper mockup-advokasi">
+                <div class="mockup-window-header">
+                  <span class="mockup-dot red"></span>
+                  <span class="mockup-dot yellow"></span>
+                  <span class="mockup-dot green"></span>
+                  <span class="mockup-address">advokasi-infrastruktur.app/dashboard</span>
+                </div>
+                <div class="mockup-dashboard-ui">
+                  <div class="mockup-sidebar">
+                    <div class="sidebar-item active"></div>
+                    <div class="sidebar-item"></div>
+                    <div class="sidebar-item"></div>
+                    <div class="sidebar-item"></div>
+                  </div>
+                  <div class="mockup-main">
+                    <div class="mockup-stat-row">
+                      <div class="stat-box">
+                        <span class="stat-num">124</span>
+                        <span class="stat-lbl">Sekolah Terdata</span>
+                      </div>
+                      <div class="stat-box highlight">
+                        <span class="stat-num">38</span>
+                        <span class="stat-lbl">Isu Kritis</span>
+                      </div>
+                      <div class="stat-box">
+                        <span class="stat-num">86%</span>
+                        <span class="stat-lbl">Tinjauan Wilayah</span>
+                      </div>
+                    </div>
+                    <div class="mockup-table-preview">
+                      <div class="table-row-head">
+                        <span>Nama Sekolah</span>
+                        <span>Wilayah</span>
+                        <span>Status Kerusakan</span>
+                      </div>
+                      <div class="table-row">
+                        <span>SMK Negeri 1</span>
+                        <span>Wilayah Barat</span>
+                        <span class="status-pill danger">Prioritas Tinggi</span>
+                      </div>
+                      <div class="table-row">
+                        <span>SD Negeri 04</span>
+                        <span>Wilayah Timur</span>
+                        <span class="status-pill warning">Perlu Verifikasi</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <span class="featured-badge">⭐ Proyek Unggulan</span>
+            </div>
+
+            <div class="card-content">
+              <div class="card-category">Dashboard & Sistem Informasi</div>
+              <h3 class="card-title">Sistem Informasi Manajemen Advokasi Kebutuhan Infrastruktur Sekolah</h3>
+              <p class="card-description">
+                Aplikasi web yang dirancang untuk mendokumentasikan, mengklasifikasikan, dan memantau kondisi serta kebutuhan fasilitas sekolah di berbagai wilayah secara terpadu.
+              </p>
+
+              <div class="card-role-box">
+                <span class="role-title">Peran Saya:</span>
+                <span class="role-desc">Frontend Developer — Mendesain dan membangun komponen antarmuka, layout dashboard responsif, form pelaporan terstruktur, serta visualisasi klaster isu.</span>
+              </div>
+
+              <div class="card-tech-stack">
+                <span class="tech-tag">Tailwind CSS</span>
+                <span class="tech-tag">Shadcn/ui</span>
+                <span class="tech-tag">JavaScript</span>
+                <span class="tech-tag">HTML5 / CSS3</span>
+              </div>
+
+              <div class="card-actions">
+                <button type="button" class="btn btn-sm btn-primary btn-open-modal" data-project="advokasi" id="btn-modal-advokasi">
+                  Detail Studi Kasus
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                    <polyline points="12 5 19 12 12 19"></polyline>
+                  </svg>
+                </button>
+                <span class="repo-badge">[Tersedia saat wawancara / Demo]</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- PROJECT 2: E-COMMERCE -->
+          <article class="project-card" data-category="ecommerce" id="project-card-ecommerce">
+            <div class="card-media">
+              <!-- Visual UI Mockup for E-Commerce -->
+              <div class="ui-mockup-wrapper mockup-ecommerce">
+                <div class="mockup-window-header">
+                  <span class="mockup-dot red"></span>
+                  <span class="mockup-dot yellow"></span>
+                  <span class="mockup-dot green"></span>
+                  <span class="mockup-address">store-catalog.web/shop</span>
+                </div>
+                <div class="mockup-store-ui">
+                  <div class="store-nav-bar">
+                    <div class="store-brand"></div>
+                    <div class="store-search"></div>
+                    <div class="store-cart"></div>
+                  </div>
+                  <div class="store-banner">
+                    <span>Trending Collection & Special Offers</span>
+                  </div>
+                  <div class="store-grid">
+                    <div class="store-card">
+                      <div class="store-card-img"></div>
+                      <div class="store-card-txt"></div>
+                    </div>
+                    <div class="store-card">
+                      <div class="store-card-img"></div>
+                      <div class="store-card-txt"></div>
+                    </div>
+                    <div class="store-card">
+                      <div class="store-card-img"></div>
+                      <div class="store-card-txt"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="card-content">
+              <div class="card-category">Katalog & E-Commerce</div>
+              <h3 class="card-title">Website Toko Online Responsif (E-Commerce)</h3>
+              <p class="card-description">
+                Platform web katalog produk online dengan penekanan pada kemudahan navigasi pengguna, tampilan kategori barang trending, dan grid produk dinamis yang adaptif di smartphone.
+              </p>
+
+              <div class="card-role-box">
+                <span class="role-title">Peran Saya:</span>
+                <span class="role-desc">Frontend Developer — Membangun struktur layout responsif dengan Bootstrap, interaktivitas event dengan JavaScript, dan penataan grid katalog produk.</span>
+              </div>
+
+              <div class="card-tech-stack">
+                <span class="tech-tag">Bootstrap</span>
+                <span class="tech-tag">JavaScript</span>
+                <span class="tech-tag">HTML5</span>
+                <span class="tech-tag">CSS3</span>
+                <span class="tech-tag">MySQL</span>
+              </div>
+
+              <div class="card-actions">
+                <button type="button" class="btn btn-sm btn-primary btn-open-modal" data-project="ecommerce" id="btn-modal-ecommerce">
+                  Detail Proyek
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                    <polyline points="12 5 19 12 12 19"></polyline>
+                  </svg>
+                </button>
+                <span class="repo-badge">[Tersedia saat wawancara / Demo]</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- PROJECT 3: E-RAPOR -->
+          <article class="project-card" data-category="academic" id="project-card-erapor">
+            <div class="card-media">
+              <!-- Visual UI Mockup for E-Rapor -->
+              <div class="ui-mockup-wrapper mockup-erapor">
+                <div class="mockup-window-header">
+                  <span class="mockup-dot red"></span>
+                  <span class="mockup-dot yellow"></span>
+                  <span class="mockup-dot green"></span>
+                  <span class="mockup-address">erapor-akademik.sch.id/portal</span>
+                </div>
+                <div class="mockup-rapor-ui">
+                  <div class="rapor-header">
+                    <span class="rapor-title-pill">Portal Nilai Siswa</span>
+                    <span class="rapor-role-pill">Guru & Wali Kelas</span>
+                  </div>
+                  <div class="rapor-form-preview">
+                    <div class="rapor-input-group">
+                      <div class="rapor-input-sm"></div>
+                      <div class="rapor-input-sm"></div>
+                    </div>
+                    <div class="rapor-table">
+                      <div class="rapor-th">
+                        <span>No</span>
+                        <span>Mata Pelajaran</span>
+                        <span>KKM</span>
+                        <span>Nilai Akhir</span>
+                      </div>
+                      <div class="rapor-tr">
+                        <span>1</span>
+                        <span>Pemrograman Web</span>
+                        <span>75</span>
+                        <span class="score-pass">88</span>
+                      </div>
+                      <div class="rapor-tr">
+                        <span>2</span>
+                        <span>Basis Data</span>
+                        <span>75</span>
+                        <span class="score-pass">90</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="card-content">
+              <div class="card-category">Sistem Informasi Akademik</div>
+              <h3 class="card-title">Sistem Informasi Pengelolaan E-Rapor Sekolah</h3>
+              <p class="card-description">
+                Aplikasi digitalisasi penilaian akademik multi-role yang menyederhanakan alur rekapitulasi data nilai siswa bagi guru mata pelajaran, wali kelas, dan siswa.
+              </p>
+
+              <div class="card-role-box">
+                <span class="role-title">Peran Saya:</span>
+                <span class="role-desc">Developer — Mengembangkan antarmuka form input penilaian, tabel rekapitulasi nilai, serta logika pemisahan tampilan sesuai hak akses pengguna.</span>
+              </div>
+
+              <div class="card-tech-stack">
+                <span class="tech-tag">PHP</span>
+                <span class="tech-tag">HTML5</span>
+                <span class="tech-tag">CSS3</span>
+                <span class="tech-tag">MySQL</span>
+              </div>
+
+              <div class="card-actions">
+                <button type="button" class="btn btn-sm btn-primary btn-open-modal" data-project="erapor" id="btn-modal-erapor">
+                  Detail Proyek
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                    <polyline points="12 5 19 12 12 19"></polyline>
+                  </svg>
+                </button>
+                <span class="repo-badge">[Tersedia saat wawancara / Demo]</span>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- EDUCATION SECTION -->
+    <section class="section education-section" id="education">
+      <div class="container">
+        <div class="section-heading">
+          <span class="section-tag">Latar Belakang</span>
+          <h2 class="section-title">Pendidikan Formal</h2>
+          <p class="section-subtitle">Fondasi akademik yang membentuk pemahaman logika pemrograman dan rekayasa perangkat lunak.</p>
+        </div>
+
+        <div class="education-card-wrapper">
+          <div class="education-card">
+            <div class="edu-icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
+                <path d="M6 12v5c3 3 9 3 12 0v-5"></path>
+              </svg>
+            </div>
+            <div class="edu-details">
+              <div class="edu-head">
+                <div>
+                  <h3 class="edu-degree">D3 Teknik Informatika</h3>
+                  <span class="edu-campus">Program Diploma Teknologi Informasi</span>
+                </div>
+                <span class="edu-status-badge">Lulusan D3</span>
+              </div>
+              <p class="edu-desc">
+                Mempelajari pemodelan perangkat lunak, pemrograman web front-end dan back-end, perancangan basis data relasional, struktur data, serta metodologi pengembangan sistem informasi secara praktis.
+              </p>
+              <div class="edu-tags">
+                <span class="edu-tag">Pemrograman Web</span>
+                <span class="edu-tag">Struktur Data & Algoritma</span>
+                <span class="edu-tag">Basis Data Relasional</span>
+                <span class="edu-tag">Rekayasa Perangkat Lunak</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section class="section contact-section" id="contact">
+      <div class="container">
+        <div class="section-heading">
+          <span class="section-tag">Kontak</span>
+          <h2 class="section-title">Mari Terhubung & Berdiskusi</h2>
+          <p class="section-subtitle">Tertarik merekrut atau berdiskusi mengenai peluang posisi Frontend Developer? Silakan hubungi saya.</p>
+        </div>
+
+        <div class="contact-grid">
+          <!-- Contact Channels Info -->
+          <div class="contact-channels">
+            <h3 class="channels-title">Informasi Kontak Langsung</h3>
+            <p class="channels-desc">Saya selalu terbuka untuk berdiskusi mengenai kesempatan kerja full-time, kontrak, maupun proyek pengembangan antarmuka web.</p>
+
+            <div class="channel-card">
+              <div class="channel-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                  <polyline points="22,6 12,13 2,6"></polyline>
+                </svg>
+              </div>
+              <div class="channel-content">
+                <span class="channel-label">Email</span>
+                <span class="channel-value" id="email-text">dimas.frontend@example.com</span>
+              </div>
+              <button type="button" class="btn-copy-email" id="btn-copy-email" title="Salin Email">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                  <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                </svg>
+                <span>Salin</span>
+              </button>
+            </div>
+
+            <div class="channel-card">
+              <div class="channel-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                </svg>
+              </div>
+              <div class="channel-content">
+                <span class="channel-label">GitHub Repository</span>
+                <span class="channel-value">github.com/[username-anda]</span>
+              </div>
+            </div>
+
+            <div class="channel-card">
+              <div class="channel-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                  <rect x="2" y="9" width="4" height="12"></rect>
+                  <circle cx="4" cy="4" r="2"></circle>
+                </svg>
+              </div>
+              <div class="channel-content">
+                <span class="channel-label">LinkedIn</span>
+                <span class="channel-value">linkedin.com/in/[profil-anda]</span>
+              </div>
+            </div>
+
+            <div class="channel-card">
+              <div class="channel-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                  <circle cx="12" cy="10" r="3"></circle>
+                </svg>
+              </div>
+              <div class="channel-content">
+                <span class="channel-label">Lokasi</span>
+                <span class="channel-value">Indonesia (Tersedia Onsite / Remote)</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Interactive Contact Form -->
+          <div class="contact-form-wrapper">
+            <h3 class="form-title">Kirim Pesan Cepat</h3>
+            <form id="contact-form" class="contact-form">
+              <div class="form-group">
+                <label for="contact-name" class="form-label">Nama Anda</label>
+                <input type="text" id="contact-name" class="form-control" placeholder="cth: Budi Santoso / PT Teknologi Bangsa" required>
+              </div>
+
+              <div class="form-group">
+                <label for="contact-email" class="form-label">Alamat Email</label>
+                <input type="email" id="contact-email" class="form-control" placeholder="nama@perusahaan.com" required>
+              </div>
+
+              <div class="form-group">
+                <label for="contact-subject" class="form-label">Subjek / Topik</label>
+                <input type="text" id="contact-subject" class="form-control" placeholder="Peluang Kerja Frontend Developer / Diskusi Proyek" required>
+              </div>
+
+              <div class="form-group">
+                <label for="contact-message" class="form-label">Pesan</label>
+                <textarea id="contact-message" class="form-control" rows="4" placeholder="Tuliskan pesan, rincian kualifikasi, atau pertanyaan Anda di sini..." required></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-primary w-full" id="btn-submit-message">
+                <span>Kirim Pesan</span>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <line x1="22" y1="2" x2="11" y2="13"></line>
+                  <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                </svg>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container footer-container">
+      <div class="footer-left">
+        <a href="#home" class="logo">
+          <span class="logo-symbol">&lt;/&gt;</span>
+          <span class="logo-text">Dimas<span class="accent-dot">.</span></span>
+        </a>
+        <p class="footer-tagline">Membangun pengalaman antarmuka web yang rapi, adaptif, dan berorientasi pada kebutuhan pengguna.</p>
+      </div>
+      <div class="footer-right">
+        <ul class="footer-nav">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">Tentang</a></li>
+          <li><a href="#skills">Keahlian</a></li>
+          <li><a href="#projects">Proyek</a></li>
+          <li><a href="#education">Pendidikan</a></li>
+          <li><a href="#contact">Kontak</a></li>
+        </ul>
+        <p class="copyright">&copy; <span id="current-year">2026</span> Dimas. Seluruh hak cipta dilindungi.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- PROJECT DETAIL MODAL DIALOG -->
+  <div class="modal-backdrop" id="project-modal" aria-hidden="true" role="dialog" aria-modal="true">
+    <div class="modal-dialog">
+      <div class="modal-header">
+        <div class="modal-title-wrap">
+          <span class="modal-tag" id="modal-category">Kategori Proyek</span>
+          <h3 class="modal-title" id="modal-title">Judul Proyek</h3>
+        </div>
+        <button type="button" class="modal-close-btn" id="modal-close-btn" aria-label="Tutup Dialog">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+      <div class="modal-body" id="modal-body-content">
+        <!-- Content will be injected dynamically via JavaScript -->
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-outline" id="modal-btn-close-footer">Tutup</button>
+        <a href="#contact" class="btn btn-primary" id="modal-btn-discuss">Diskusikan Proyek Ini</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- TOAST NOTIFICATION -->
+  <div class="toast-notification" id="toast" role="alert" aria-live="assertive">
+    <span class="toast-icon">✓</span>
+    <span class="toast-message" id="toast-message">Pemberitahuan</span>
+  </div>
+
+  <!-- Back to top button -->
+  <button type="button" class="back-to-top" id="back-to-top-btn" aria-label="Kembali ke atas">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <line x1="12" y1="19" x2="12" y2="5"></line>
+      <polyline points="5 12 12 5 19 12"></polyline>
+    </svg>
+  </button>
+
+  <!-- Main JavaScript File -->
+  <script src="script.js"></script>
+</body>
+</html>
